@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide RouterConfig;
 
 import '../models/router_config.dart';
 import '../services/ssh_service.dart';
