@@ -1,4 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:openwrt_wifi_manager/main.dart';
 import 'package:openwrt_wifi_manager/models/router_config.dart';
 import 'package:openwrt_wifi_manager/services/mock_ssh_service.dart';
 import 'package:openwrt_wifi_manager/services/openwrt_service.dart';
@@ -9,6 +10,10 @@ const _cfg = RouterConfig(host: '192.168.1.1', password: 'x');
 MockSshService _mock() => MockSshService(delay: Duration.zero);
 
 void main() {
+  test('application entrypoint compiles', () {
+    expect(WifiManagerApp, isA<Type>());
+  });
+
   test('validators', () {
     expect(Validators.ssid(''), isNotNull);
     expect(Validators.ssid("a'b"), isNotNull);
