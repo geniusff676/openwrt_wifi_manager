@@ -1,0 +1,21 @@
+name: openwrt_wifi_manager
+description: Self-service app to change the internal Wi-Fi SSID/password on an OpenWrt router over SSH.
+publish_to: none
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.4.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  dartssh2: ^2.9.0
+  flutter_secure_storage: ^9.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
